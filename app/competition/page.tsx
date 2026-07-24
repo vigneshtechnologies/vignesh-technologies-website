@@ -14,6 +14,7 @@ import {
   Presentation,
   ClipboardList,
   Download,
+  CalendarDays,
 } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -23,12 +24,28 @@ const playStoreLink =
   'https://play.google.com/store/apps/details?id=com.vigneshtechnologies.circular&hl=en_IN'
 
 
+const googleFormLink =
+  'https://docs.google.com/forms/d/e/1FAIpQLSeKTu-0pN-Woux4_DNd9zpC2YkAZp_hwMnkl_dKYJui1foNZA/viewform?usp=header'
+
+
 const eligibility = [
   'Students studying Classes 6 to 12',
   'Open to all schools across Virudhunagar District',
   'Individual participation or team participation',
   'Maximum 2 students per team',
   'Each participant/team must have a mentor teacher',
+  'There is no limit on the number of teams participating from a school',
+]
+
+
+const importantDates = [
+  ['Registration Opens', '27 July 2026'],
+  ['Last Date for Registration & Round 1 Submission', '12 August 2026'],
+  ['Round 1 Evaluation & Shortlisting', '13 August - 17 August 2026'],
+  ['Top 20 Teams Announcement', '18 August 2026'],
+  ['PPT Preparation Period', '19 August - 27 August 2026'],
+  ['Online Presentation (Round 2)', '28 August - 30 August 2026'],
+  ['Final Results Announcement', '31 August 2026'],
 ]
 
 
@@ -37,19 +54,19 @@ const rounds = [
     icon: Smartphone,
     title: 'Round 1: Circular Idea Submission',
     description:
-      'Students download Circular App and post their innovative app idea. Participation can be individual or as a team with maximum 2 students.',
+      'Students download Circular App, create an account and post their innovative app idea. Participation can be individual or team based with maximum 2 students.',
   },
   {
     icon: Users,
     title: 'Student & Mentor Posts',
     description:
-      'Students must post their idea on Circular. The mentor/teacher must also post the same idea on Circular for verification.',
+      'Students must post their idea on Circular App. The mentor/teacher must also post the same idea on Circular App for verification.',
   },
   {
     icon: FileCheck,
     title: 'Google Form Submission',
     description:
-      'Submit Circular post screenshots along with student, school and mentor details through the official Google Form.',
+      'Submit Circular App post screenshots along with student, school and mentor details through the official Google Form.',
   },
   {
     icon: Trophy,
@@ -61,7 +78,7 @@ const rounds = [
     icon: Presentation,
     title: 'Round 2: Online Presentation',
     description:
-      'Selected teams prepare a PPT and present their app idea through Google Meet during their allotted time slot.',
+      'Selected teams will prepare a PPT presentation and present their app idea through Google Meet. Schedule and instructions will be communicated to mentors through email.',
   },
 ]
 
@@ -76,924 +93,1010 @@ const judging = [
 
 export default function CompetitionPage() {
 
-  return (
-    <main className="bg-background">
+return (
 
+<main className="bg-background">
 
-      {/* Hero Section */}
 
-      <section className="bg-primary/5">
+{/* Banner Section */}
 
-        <div className="mx-auto max-w-6xl px-4 py-16 text-center md:px-6 md:py-24">
+<section className="bg-white">
 
+<div className="mx-auto max-w-7xl px-4 pt-6 md:px-6">
 
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-white">
+<img
+src="/competition-banner.png"
+alt="Circular App Innovation Challenge 2026"
+className="w-full rounded-2xl object-cover shadow-md"
+/>
 
-            <Trophy className="h-8 w-8" />
+</div>
 
-          </div>
+</section>
 
 
-          <p className="mt-6 text-sm font-semibold uppercase tracking-wide text-primary">
 
-            Vignesh Technologies Presents
+{/* Hero Section */}
 
-          </p>
+<section className="bg-primary/5">
 
+<div className="mx-auto max-w-6xl px-4 py-16 text-center md:px-6 md:py-24">
 
-          <h1 className="mt-3 text-4xl font-bold text-navy md:text-5xl">
 
-            Circular App Development Challenge 2026
+<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-white">
 
-          </h1>
+<Trophy className="h-8 w-8" />
 
+</div>
 
-          <p className="mt-4 text-xl font-bold text-primary">
 
-            Virudhunagar District Edition
+<p className="mt-6 text-sm font-semibold uppercase tracking-wide text-primary">
 
-          </p>
+Vignesh Technologies Presents
 
+</p>
 
 
-          <p className="mx-auto mt-5 max-w-3xl leading-relaxed text-muted-foreground">
+<h1 className="mt-3 text-4xl font-bold text-navy md:text-5xl">
 
-            A district-level innovation challenge for school students to
-            showcase app ideas, creativity and problem-solving skills using
-            Circular App.
+Circular App Innovation Challenge 2026
 
-          </p>
+</h1>
 
 
+<p className="mt-4 text-xl font-bold text-primary">
 
-          {/* Main Marketing Cards */}
+Virudhunagar District Edition
 
-          <div className="mt-8 flex flex-col justify-center gap-5 md:flex-row">
+</p>
 
 
-            <div className="rounded-2xl bg-green-100 px-10 py-6">
 
-              <p className="text-sm font-bold text-green-700">
+<p className="mx-auto mt-5 max-w-3xl leading-relaxed text-muted-foreground">
 
-                REGISTRATION
+An online district-level innovation challenge for school students to
+showcase app ideas, creativity and problem-solving skills using
+Circular App.
 
-              </p>
+</p>
 
 
-              <p className="text-5xl font-black text-green-700">
 
-                FREE
+<div className="mt-8 flex flex-col justify-center gap-5 md:flex-row">
 
-              </p>
 
+<div className="rounded-2xl bg-green-100 px-10 py-6">
 
-              <p className="text-sm text-green-700">
+<p className="text-sm font-bold text-green-700">
+REGISTRATION
+</p>
 
-                No Participation Fee
 
-              </p>
+<p className="text-5xl font-black text-green-700">
+FREE
+</p>
 
 
-            </div>
+<p className="text-sm text-green-700">
+No Participation Fee
+</p>
 
 
+</div>
 
 
-            <div className="rounded-2xl bg-primary px-10 py-6 text-white">
 
+<div className="rounded-2xl bg-primary px-10 py-6 text-white">
 
-              <p className="text-sm font-bold">
+<p className="text-sm font-bold">
+WINNER BENEFITS
+</p>
 
-                WINNER BENEFITS
 
-              </p>
+<p className="text-5xl font-black">
+₹1.5 Lakh
+</p>
 
 
-              <p className="text-5xl font-black">
+<p className="text-sm">
+Worth Training Program
+</p>
 
-                ₹1.5 Lakh
 
-              </p>
+</div>
 
 
-              <p className="text-sm">
+</div>
 
-                Worth Training Program
 
-              </p>
 
 
-            </div>
+<div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
 
 
-          </div>
+<a href={googleFormLink} target="_blank">
 
+<Button size="lg">
 
+Register Now
 
+</Button>
 
-          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+</a>
 
 
-            <Button size="lg">
 
-              Register Now
+<a href="/brochure.pdf" target="_blank">
 
-            </Button>
+<Button size="lg" variant="outline">
 
+<FileText className="mr-2 h-4 w-4" />
 
+Download Brochure
 
-            <a href="/brochure.pdf" target="_blank">
+</Button>
 
-              <Button size="lg" variant="outline">
 
-                <FileText className="mr-2 h-4 w-4" />
+</a>
 
-                Download Brochure
 
-              </Button>
+</div>
 
 
-            </a>
 
 
-          </div>
 
+{/* Circular App Download */}
 
+<div className="mx-auto mt-12 max-w-md rounded-2xl border bg-card p-6">
 
 
-          {/* Circular App Download Card - Logo Place 1 */}
+<img
 
+src="/circular-logo.png"
 
-          <div className="mx-auto mt-12 max-w-md rounded-2xl border bg-card p-6">
+alt="Circular App"
 
+className="mx-auto h-20 w-20 rounded-2xl"
 
-            <img
+/>
 
-              src="/circular-logo.png"
 
-              alt="Circular App"
 
-              className="mx-auto h-20 w-20 rounded-2xl"
+<h3 className="mt-4 text-xl font-bold text-navy">
 
-            />
+Download Circular App
 
+</h3>
 
 
-            <h3 className="mt-4 text-xl font-bold text-navy">
 
-              Download Circular App
+<p className="mt-2 text-sm text-muted-foreground">
 
-            </h3>
+Install Circular App to post your idea and participate in the competition.
 
+</p>
 
 
-            <p className="mt-2 text-sm text-muted-foreground">
 
-              Install Circular App to post your idea and participate in the
-              competition.
 
-            </p>
+<img
 
+src="/circular-qr.png"
 
+alt="Circular App QR Code"
 
+className="mx-auto mt-5 h-40 w-40 rounded-lg border"
 
-            <img
+/>
 
-              src="/circular-qr.png"
 
-              alt="Circular App QR Code"
 
-              className="mx-auto mt-5 h-40 w-40 rounded-lg border"
 
-            />
+<a
+href={playStoreLink}
+target="_blank"
+className="mt-5 block"
+>
 
+<Button className="w-full">
 
+<Download className="mr-2 h-4 w-4" />
 
+Download from Play Store
 
-            <a
+</Button>
 
-              href={playStoreLink}
 
-              target="_blank"
+</a>
 
-              className="mt-5 block"
 
-            >
+</div>
 
-              <Button className="w-full">
 
-                <Download className="mr-2 h-4 w-4" />
+</div>
 
-                Download from Play Store
+</section>
+{/* About Competition */}
 
-              </Button>
+<section>
 
+<div className="mx-auto max-w-6xl px-4 py-16 md:px-6">
 
-            </a>
 
+<div className="flex items-center gap-4">
 
+<img
 
-          </div>
+src="/circular-logo.png"
 
+alt="Circular App"
 
-        </div>
+className="h-14 w-14 rounded-xl"
 
-      </section>
+/>
 
 
+<h2 className="text-3xl font-bold text-navy">
 
+About the Competition
 
+</h2>
 
-      {/* About Section */}
 
+</div>
 
-      <section>
 
 
-        <div className="mx-auto max-w-6xl px-4 py-16 md:px-6">
 
+<p className="mt-5 leading-relaxed text-muted-foreground">
 
+Circular App Innovation Challenge 2026 is an initiative by Vignesh Technologies
+to encourage young innovators. Students get an opportunity to identify
+real-world problems, develop innovative app ideas and showcase their creativity
+using Circular App.
 
-          {/* Circular Logo Place 2 */}
+</p>
 
-          <div className="flex items-center gap-4">
 
-            <img
 
-              src="/circular-logo.png"
 
-              alt="Circular App"
+<p className="mt-4 leading-relaxed text-muted-foreground">
 
-              className="h-14 w-14 rounded-xl"
+The competition focuses on innovation, problem-solving and presentation
+skills rather than only coding knowledge.
 
-            />
+</p>
 
-            <h2 className="text-3xl font-bold text-navy">
 
-              About the Competition
+</div>
 
-            </h2>
+</section>
 
 
-          </div>
 
 
 
+{/* Competition Highlights */}
 
+<section className="bg-muted/30">
 
-          <p className="mt-5 leading-relaxed text-muted-foreground">
 
+<div className="mx-auto max-w-6xl px-4 py-16 md:px-6">
 
-            Circular App Development Challenge 2026 is an initiative by
-            Vignesh Technologies to encourage young innovators. Students get
-            an opportunity to present their ideas, identify real-world problems
-            and showcase their creativity.
 
+<h2 className="text-3xl font-bold text-navy">
 
-          </p>
+Competition Highlights
 
+</h2>
 
 
 
-          <p className="mt-4 leading-relaxed text-muted-foreground">
+<div className="mt-8 grid gap-6 md:grid-cols-4">
 
 
-            The competition focuses on innovation, problem-solving and
-            presentation skills rather than only coding knowledge.
+{[
+['Virudhunagar District Level', School],
+['Classes 6 - 12', Users],
+['100% Free Registration', BadgeCheck],
+['100% Online Competition', Lightbulb],
+].map(([text, Icon]) => (
 
 
-          </p>
+<div
 
+key={text as string}
 
+className="rounded-2xl border bg-card p-6 text-center"
 
-        </div>
+>
 
 
-      </section>
+<Icon className="mx-auto h-8 w-8 text-primary" />
 
 
+<p className="mt-4 font-semibold text-navy">
 
+{text as string}
 
+</p>
 
-      {/* Highlights Section */}
 
+</div>
 
-      <section className="bg-muted/30">
 
+))}
 
-        <div className="mx-auto max-w-6xl px-4 py-16 md:px-6">
 
+</div>
 
-          <h2 className="text-3xl font-bold text-navy">
 
-            Competition Highlights
+</div>
 
-          </h2>
 
+</section>
 
 
-          <div className="mt-8 grid gap-6 md:grid-cols-4">
 
 
-            {[
-              ['Virudhunagar District Level', School],
-              ['Classes 6 - 12', Users],
-              ['100% Free Registration', BadgeCheck],
-              ['Innovation Challenge', Lightbulb],
-            ].map(([text, Icon]) => (
 
+{/* Eligibility */}
 
-              <div
+<section>
 
-                key={text as string}
 
-                className="rounded-2xl border bg-card p-6 text-center"
+<div className="mx-auto max-w-6xl px-4 py-16 md:px-6">
 
-              >
 
-                <Icon className="mx-auto h-8 w-8 text-primary" />
+<h2 className="text-3xl font-bold text-navy">
 
+Eligibility
 
-                <p className="mt-4 font-semibold text-navy">
+</h2>
 
-                  {text as string}
 
-                </p>
 
 
-              </div>
+<div className="mt-6 grid gap-4 md:grid-cols-2">
 
 
-            ))}
+{eligibility.map((item) => (
 
 
-          </div>
+<div
 
+key={item}
 
-        </div>
+className="rounded-xl border bg-card p-5"
 
+>
 
-      </section>
+✓ {item}
 
+</div>
 
 
+))}
 
 
-      {/* Eligibility Section */}
+</div>
 
 
-      <section>
+</div>
 
 
-        <div className="mx-auto max-w-6xl px-4 py-16 md:px-6">
+</section>
 
 
-          <h2 className="text-3xl font-bold text-navy">
 
-            Eligibility
 
-          </h2>
 
 
 
+{/* Important Dates */}
 
-          <div className="mt-6 grid gap-4 md:grid-cols-2">
+<section className="bg-primary/5">
 
 
-            {eligibility.map((item) => (
+<div className="mx-auto max-w-6xl px-4 py-16 md:px-6">
 
 
-              <div
+<div className="flex items-center gap-3">
 
-                key={item}
+<CalendarDays className="h-8 w-8 text-primary"/>
 
-                className="rounded-xl border bg-card p-5"
 
-              >
+<h2 className="text-3xl font-bold text-navy">
 
-                ✓ {item}
+Important Dates
 
-              </div>
+</h2>
 
+</div>
 
-            ))}
 
 
-          </div>
 
+<div className="mt-8 overflow-hidden rounded-2xl border bg-card">
 
-        </div>
 
+{importantDates.map(([event,date]) => (
 
-      </section>      
-      
-      {/* Competition Process */}
 
-      <section className="bg-primary/5">
+<div
 
-        <div className="mx-auto max-w-6xl px-4 py-16 md:px-6">
+key={event}
 
+className="flex flex-col gap-2 border-b p-5 md:flex-row md:justify-between"
 
-          <div className="text-center">
+>
 
 
-            <h2 className="text-3xl font-bold text-navy">
+<p className="font-semibold text-navy">
 
-              Competition Process
+{event}
 
-            </h2>
+</p>
 
 
-            <p className="mx-auto mt-4 max-w-3xl text-muted-foreground">
 
-              A two-round innovation challenge designed to identify young
-              innovators and encourage students to transform their ideas into
-              practical applications.
+<p className="text-muted-foreground">
 
-            </p>
+{date}
 
+</p>
 
-          </div>
 
+</div>
 
 
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+))}
 
 
-            {rounds.map((round) => (
+</div>
 
-              <div
 
-                key={round.title}
+</div>
 
-                className="rounded-2xl border bg-card p-6 transition hover:shadow-lg"
 
-              >
+</section>
 
 
-                <round.icon className="h-9 w-9 text-primary" />
 
 
-                <h3 className="mt-5 font-bold text-navy">
 
-                  {round.title}
 
-                </h3>
 
+{/* Competition Process */}
 
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+<section className="bg-muted/30">
 
-                  {round.description}
 
-                </p>
+<div className="mx-auto max-w-6xl px-4 py-16 md:px-6">
 
 
-              </div>
+<div className="text-center">
 
 
-            ))}
+<h2 className="text-3xl font-bold text-navy">
 
+Competition Process
 
-          </div>
+</h2>
 
 
+<p className="mx-auto mt-4 max-w-3xl text-muted-foreground">
 
+A two-round online innovation challenge designed to identify young
+innovators and encourage students to transform their ideas into practical
+applications.
 
+</p>
 
-          {/* Screenshot Details */}
 
+</div>
 
-          <div className="mt-10 rounded-2xl border bg-card p-6">
 
 
-            <div className="flex items-center gap-3">
 
+<div className="mt-10 grid gap-6 md:grid-cols-3">
 
-              <ClipboardList className="h-6 w-6 text-primary" />
 
+{rounds.map((round)=>(
 
-              <h3 className="text-xl font-bold text-navy">
 
-                Round 1 Submission Requirements
+<div
 
-              </h3>
+key={round.title}
 
+className="rounded-2xl border bg-card p-6 transition hover:shadow-lg"
 
-            </div>
+>
 
 
+<round.icon className="h-9 w-9 text-primary"/>
 
-            <div className="mt-5 space-y-4 text-muted-foreground">
 
 
-              <p>
+<h3 className="mt-5 font-bold text-navy">
 
-                <strong className="text-navy">
-                  Individual Participation:
-                </strong>
+{round.title}
 
-                <br />
+</h3>
 
-                Students have to post their app idea on Circular and their
-                mentor/teacher has to post the same idea on Circular.
 
-                <br />
 
-                Required screenshots: <strong>2 screenshots</strong>
+<p className="mt-3 text-sm leading-relaxed text-muted-foreground">
 
-                <br />
+{round.description}
 
-                1. Student Circular post
-                <br />
+</p>
 
-                2. Mentor/Teacher Circular post
 
-              </p>
+</div>
 
 
+))}
 
 
-              <p>
+</div>
 
 
-                <strong className="text-navy">
 
-                  Team Participation (Maximum 2 Students):
 
-                </strong>
 
+{/* Submission Requirements */}
 
-                <br />
+<div className="mt-10 rounded-2xl border bg-card p-6">
 
 
-                Both students and the mentor/teacher have to post the app idea
-                on Circular.
+<div className="flex items-center gap-3">
 
 
-                <br />
+<ClipboardList className="h-6 w-6 text-primary"/>
 
 
-                Required screenshots: <strong>3 screenshots</strong>
+<h3 className="text-xl font-bold text-navy">
 
+Round 1 Submission Requirements
 
-                <br />
+</h3>
 
 
-                1. Student 1 Circular post
+</div>
 
-                <br />
 
-                2. Student 2 Circular post
 
-                <br />
+<div className="mt-5 space-y-5 text-muted-foreground">
 
-                3. Mentor/Teacher Circular post
 
+<p>
 
-              </p>
+<strong className="text-navy">
+Individual Participation:
+</strong>
 
+<br/>
 
+Students have to post their app idea on Circular App and their
+mentor/teacher has to post the same idea on Circular App.
 
-              <p>
+<br/>
 
+Required Screenshots:
 
-                Submit screenshots along with student name, class, school name,
-                team details and mentor information through the official Google
-                Form.
+<br/>
 
+1. Student Circular App post
 
-              </p>
+<br/>
 
+2. Mentor/Teacher Circular App post
 
+</p>
 
-            </div>
 
 
-          </div>
 
 
-        </div>
+<p>
 
+<strong className="text-navy">
 
-      </section>
+Team Participation (Maximum 2 Students):
 
+</strong>
 
 
+<br/>
 
 
+Both students and the mentor/teacher have to post the app idea on
+Circular App.
 
-      {/* Circular App Download Section - Logo Place 3 */}
 
+<br/>
 
-      <section>
 
+Required Screenshots:
 
-        <div className="mx-auto max-w-6xl px-4 py-16 text-center md:px-6">
+<br/>
 
 
+1. Student 1 Circular App post
 
-          <img
+<br/>
 
-            src="/circular-logo.png"
+2. Student 2 Circular App post
 
-            alt="Circular App"
+<br/>
 
-            className="mx-auto h-24 w-24 rounded-2xl"
+3. Mentor/Teacher Circular App post
 
-          />
 
+</p>
 
 
-          <h2 className="mt-5 text-3xl font-bold text-navy">
 
-            Download Circular App
 
-          </h2>
+<p>
 
+Submit screenshots along with student name, class, school name,
+team details and mentor information through the official Google Form.
 
+</p>
 
-          <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
 
+</div>
 
-            Circular App is required for Round 1 submission.
-            Download the app, create your account and post your innovative idea.
 
+</div>
 
-          </p>
 
+</div>
 
 
+</section>
+{/* Google Form Registration Section */}
 
-          <div className="mt-8 flex justify-center">
+<section>
 
+<div className="mx-auto max-w-6xl px-4 py-16 text-center md:px-6">
 
-            <img
 
-              src="/circular-qr.png"
+<div className="flex justify-center">
 
-              alt="Circular App Play Store QR Code"
+<img
 
-              className="h-52 w-52 rounded-xl border p-2"
+src="/circular-logo.png"
 
-            />
+alt="Circular App"
 
+className="h-24 w-24 rounded-2xl"
 
-          </div>
+/>
 
+</div>
 
 
 
-          <a
+<h2 className="mt-5 text-3xl font-bold text-navy">
 
-            href={playStoreLink}
+Register for Circular App Innovation Challenge 2026
 
-            target="_blank"
+</h2>
 
-          >
 
-            <Button size="lg" className="mt-6">
 
 
-              <Download className="mr-2 h-4 w-4" />
+<p className="mx-auto mt-3 max-w-xl text-muted-foreground">
 
+Complete the registration form after posting your innovative app idea
+on Circular App.
 
-              Install Circular App
+</p>
 
 
-            </Button>
 
 
-          </a>
 
+<div className="mt-8 flex justify-center">
 
-        </div>
 
+<img
 
-      </section>
+src="/google-form-qr.png"
 
+alt="Google Form QR Code"
 
+className="h-52 w-52 rounded-xl border p-2"
 
+/>
 
 
+</div>
 
 
-      {/* Judging Criteria and Prize */}
 
 
-      <section className="bg-muted/30">
+<a
 
+href={googleFormLink}
 
-        <div className="mx-auto max-w-6xl px-4 py-16 md:px-6">
+target="_blank"
 
+>
 
 
-          <div className="grid gap-10 md:grid-cols-2">
+<Button size="lg" className="mt-6">
 
 
+Register Now
 
-            <div>
 
+</Button>
 
-              <h2 className="text-3xl font-bold text-navy">
 
-                Judging Criteria
+</a>
 
-              </h2>
 
 
+</div>
 
 
-              <ul className="mt-5 space-y-3">
+</section>
 
 
-                {judging.map((item) => (
 
 
-                  <li key={item}>
 
-                    ✓ {item}
 
-                  </li>
+{/* Judging Criteria and Winner Benefits */}
 
 
-                ))}
+<section className="bg-muted/30">
 
 
-              </ul>
+<div className="mx-auto max-w-6xl px-4 py-16 md:px-6">
 
 
-            </div>
 
+<div className="grid gap-10 md:grid-cols-2">
 
 
 
 
 
-            {/* Big Prize Marketing Card */}
+{/* Judging Criteria */}
 
 
-            <div className="rounded-3xl bg-primary p-10 text-center text-white">
+<div>
 
 
+<h2 className="text-3xl font-bold text-navy">
 
-              <Award className="mx-auto h-12 w-12" />
+Judging Criteria
 
+</h2>
 
 
-              <p className="mt-5 text-sm font-bold uppercase">
 
-                Winner Benefits
 
-              </p>
+<ul className="mt-5 space-y-3">
 
 
+{judging.map((item)=>(
 
-              <h2 className="mt-3 text-6xl font-black">
 
-                ₹1,50,000
+<li key={item}>
 
-              </h2>
+✓ {item}
 
+</li>
 
 
-              <p className="mt-4 text-xl font-semibold">
+))}
 
-                Worth App Development Training Program
 
-              </p>
+</ul>
 
 
+</div>
 
-              <p className="mx-auto mt-5 max-w-sm text-sm opacity-90">
 
 
-                Top 5 winning teams will receive professional app development
-                training benefits.
 
 
-              </p>
 
 
 
+{/* Winner Benefits */}
 
-              <div className="mt-6 rounded-xl bg-white/10 p-4">
 
+<div className="rounded-3xl bg-primary p-10 text-center text-white">
 
-                <p className="font-bold">
 
-                  Training Value Calculation
+<Award className="mx-auto h-12 w-12"/>
 
-                </p>
 
 
 
-                <p className="mt-2 text-sm">
+<p className="mt-5 text-sm font-bold uppercase">
 
+Winner Benefits
 
-                  5 Teams × 2 Students × ₹15,000 Course Value
+</p>
 
 
-                </p>
 
 
 
-              </div>
+<h2 className="mt-3 text-6xl font-black">
 
+₹1,50,000
 
-            </div>
+</h2>
 
 
 
-          </div>
 
 
-        </div>
+<p className="mt-4 text-xl font-semibold">
 
+Worth App Development Training Program
 
-      </section>
+</p>
 
 
 
 
 
+<p className="mx-auto mt-5 max-w-sm text-sm opacity-90">
 
+Top 5 winning teams will receive professional app development
+training benefits.
 
-      {/* Final CTA */}
+</p>
 
 
-      <section>
 
 
-        <div className="mx-auto max-w-6xl px-4 py-16 text-center md:px-6">
 
+<div className="mt-6 rounded-xl bg-white/10 p-4">
 
 
-          <Target className="mx-auto h-10 w-10 text-primary" />
+<p className="font-bold">
 
+Training Value Calculation
 
+</p>
 
-          <h2 className="mt-4 text-3xl font-bold text-navy">
 
-            Ready to Showcase Your Innovation?
 
-          </h2>
+<p className="mt-2 text-sm">
 
+5 Teams × 2 Students × ₹15,000 Course Value
 
+</p>
 
 
-          <p className="mt-3 text-muted-foreground">
+</div>
 
 
-            Participate in Circular App Development Challenge 2026.
 
+</div>
 
-          </p>
 
+</div>
 
 
+</div>
 
-          <div className="mt-8 flex justify-center gap-4">
 
+</section>
 
-            <Button size="lg">
 
-              Register Now
 
-            </Button>
 
 
 
-            <Link href="/">
 
 
-              <Button variant="outline">
+{/* Final CTA */}
 
 
-                <ArrowLeft className="mr-2 h-4 w-4" />
+<section>
 
 
-                Back to Home
+<div className="mx-auto max-w-6xl px-4 py-16 text-center md:px-6">
 
 
-              </Button>
 
+<Target className="mx-auto h-10 w-10 text-primary"/>
 
-            </Link>
 
 
 
-          </div>
+<h2 className="mt-4 text-3xl font-bold text-navy">
 
+Ready to Showcase Your Innovation?
 
-        </div>
+</h2>
 
 
-      </section>
 
 
 
-    </main>
+<p className="mt-3 text-muted-foreground">
 
-  )
+Participate in Circular App Innovation Challenge 2026.
+
+</p>
+
+
+
+
+
+<div className="mt-8 flex justify-center gap-4">
+
+
+
+<a
+
+href={googleFormLink}
+
+target="_blank"
+
+>
+
+
+<Button size="lg">
+
+Register Now
+
+</Button>
+
+
+</a>
+
+
+
+
+
+<Link href="/">
+
+
+<Button variant="outline">
+
+
+<ArrowLeft className="mr-2 h-4 w-4"/>
+
+
+Back to Home
+
+
+</Button>
+
+
+</Link>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+</main>
+
+)
 
 }
