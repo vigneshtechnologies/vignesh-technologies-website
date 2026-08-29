@@ -9,45 +9,42 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://vigneshtechnologies.vercel.app'),
+  metadataBase: new URL('https://circularapp.in'),
 
   title: {
-    default: 'Vignesh Technologies',
-    template: '%s | Vignesh Technologies',
+    default: 'Circular – Local Social & Business',
+    template: '%s | Circular',
   },
 
   description:
-    'Vignesh Technologies provides software development, mobile app development, website development, IT training, AI solutions, graphic design, and digital services in Rajapalayam, Tamil Nadu.',
+    'Circular is a hyperlocal social and business discovery platform. Discover nearby shops, events, jobs, offers, and connect with your neighborhood.',
 
   keywords: [
-    'Vignesh Technologies',
+    'Circular',
+    'Circular App',
+    'Local Social',
+    'Local Business',
+    'Nearby Posts',
+    'Hyperlocal App',
+    'Local Jobs',
+    'Need Board',
+    'Community Events',
+    'Business Directory',
     'Rajapalayam',
-    'Software Development',
-    'Website Development',
-    'Mobile App Development',
-    'Android App Development',
-    'IT Training',
-    'Python Course',
-    'C Programming',
-    'C++ Programming',
-    'MS Office Training',
-    'Graphic Design',
-    'Web Design',
-    'Artificial Intelligence',
-    'Digital Services',
     'Tamil Nadu',
+    'India',
   ],
 
-  applicationName: 'Vignesh Technologies',
+  applicationName: 'Circular',
 
   authors: [
     {
       name: 'Vignesh Technologies',
+      url: 'https://circularapp.in',
     },
   ],
 
   creator: 'Vignesh Technologies',
-
   publisher: 'Vignesh Technologies',
 
   robots: {
@@ -63,58 +60,58 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: 'https://vigneshtechnologies.vercel.app',
+    canonical: 'https://circularapp.in',
   },
 
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://vigneshtechnologies.vercel.app',
-    siteName: 'Vignesh Technologies',
-    title: 'Vignesh Technologies',
+    url: 'https://circularapp.in',
+    siteName: 'Circular – Local Social & Business',
+    title: 'Circular – Local Social & Business',
     description:
-      'Software Development, Mobile Apps, Websites, IT Training and Digital Solutions in Rajapalayam.',
+      'Discover nearby shops, events, jobs, offers, and connect with your neighborhood on Circular.',
     images: [
       {
-        url: '/logo.png',
+        url: '/circular-logo.png',
         width: 1200,
-        height: 630,
-        alt: 'Vignesh Technologies',
+        height: 1200,
+        alt: 'Circular – Local Social & Business',
       },
     ],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Vignesh Technologies',
+    title: 'Circular – Local Social & Business',
     description:
-      'Software Development, Mobile Apps, Websites, IT Training and Digital Solutions.',
-    images: ['/logo.png'],
+      'Discover nearby shops, events, jobs, offers, and connect with your neighborhood on Circular.',
+    images: ['/circular-logo.png'],
   },
 
   icons: {
     icon: [
       {
-        url: '/favicon.ico',
+        url: '/circular-logo.png',
       },
       {
-        url: '/icon-192.png',
+        url: '/circular-logo.png',
         sizes: '192x192',
         type: 'image/png',
       },
       {
-        url: '/icon-512.png',
+        url: '/circular-logo.png',
         sizes: '512x512',
         type: 'image/png',
       },
     ],
-    apple: '/apple-icon.png',
-    shortcut: '/favicon.ico',
+    apple: '/circular-logo.png',
+    shortcut: '/circular-logo.png',
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#1e3a8a',
+  themeColor: '#0B0F17',
 }
 
 export default function RootLayout({
@@ -132,21 +129,25 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'Vignesh Technologies',
-              url: 'https://vigneshtechnologies.vercel.app',
-              logo: 'https://vigneshtechnologies.vercel.app/logo.png',
-              email: 'vigneshtechnologyservice@gmail.com',
-              telephone: '+91 8122753620',
-              address: {
-                '@type': 'PostalAddress',
-                addressLocality: 'Rajapalayam',
-                addressRegion: 'Tamil Nadu',
-                addressCountry: 'IN',
+              '@type': 'SoftwareApplication',
+              name: 'Circular',
+              operatingSystem: 'Android',
+              applicationCategory: 'SocialNetworkingApplication',
+              offers: {
+                '@type': 'Offer',
+                price: '0',
+                priceCurrency: 'INR',
               },
-              sameAs: [
+              description:
+                'Hyperlocal social and business discovery platform for discovering nearby posts, events, jobs, and local businesses.',
+              url: 'https://circularapp.in',
+              downloadUrl:
                 'https://play.google.com/store/apps/details?id=com.vigneshtechnologies.circular',
-              ],
+              author: {
+                '@type': 'Organization',
+                name: 'Vignesh Technologies',
+                url: 'https://circularapp.in',
+              },
             }),
           }}
         />

@@ -1,35 +1,29 @@
-import { SiteHeader } from '@/components/site-header'
-import { Hero } from '@/components/hero'
-import { About } from '@/components/about'
-import { Services } from '@/components/services'
-import { CircularApp } from '@/components/circular-app'
-import { Competition } from '@/components/competition'
-import { Courses } from '@/components/courses'
-import { Projects } from '@/components/projects'
-import { WhyChooseUs } from '@/components/why-choose-us'
-import { Testimonials } from '@/components/testimonials'
-import { Contact } from '@/components/contact'
-import { SiteFooter } from '@/components/site-footer'
+import { CircularHeader } from '@/components/circular-header'
+import { HeroSection } from '@/components/landing/hero-section'
+import { WhatIsCircular } from '@/components/landing/what-is-circular'
+import { KeyFeatures } from '@/components/landing/key-features'
+import { HowItWorks } from '@/components/landing/how-it-works'
+import { BusinessSection } from '@/components/landing/business-section'
+import { CommunitySection } from '@/components/landing/community-section'
+import { AppDownloadSection } from '@/components/landing/app-download-section'
+import { TrustAndSafety } from '@/components/landing/trust-and-safety'
+import { CircularFooter } from '@/components/circular-footer'
 
-export default function Page() {
+export default function CircularHomePage() {
   return (
     <>
-      <SiteHeader />
-
+      <CircularHeader />
       <main>
-        <Hero />
-        <About />
-        <Services />
-        <CircularApp />
-        <Competition />
-        <Courses />
-        <Projects />
-        <WhyChooseUs />
-        <Testimonials />
-        <Contact />
+        <HeroSection />
+        <WhatIsCircular />
+        <KeyFeatures />
+        <HowItWorks />
+        <BusinessSection />
+        <CommunitySection />
+        <AppDownloadSection />
+        <TrustAndSafety />
       </main>
-
-      <SiteFooter />
+      <CircularFooter />
     </>
   )
 }
