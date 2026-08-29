@@ -151,8 +151,31 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-navy-foreground/10 pt-6 text-center text-sm text-navy-foreground/60">
-          &copy; {new Date().getFullYear()} Vignesh Technologies. All rights reserved.
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-navy-foreground/10 pt-6 text-sm text-navy-foreground/60 sm:flex-row">
+          <p>&copy; {new Date().getFullYear()} Vignesh Technologies. All rights reserved.</p>
+          <div className="flex flex-wrap items-center gap-4 text-xs">
+            <Link href="/terms" className="transition-colors hover:text-navy-foreground">
+              Terms of Service
+            </Link>
+            <span>•</span>
+            <a
+              href="https://sites.google.com/view/circular-privacy-policy/home"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-navy-foreground"
+            >
+              Privacy Policy
+            </a>
+            <span>•</span>
+            <a
+              href="https://sites.google.com/view/circular-privacy-policy/community-guidelines"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-navy-foreground"
+            >
+              Community Guidelines
+            </a>
+          </div>
         </div>
       </div>
     </footer>
