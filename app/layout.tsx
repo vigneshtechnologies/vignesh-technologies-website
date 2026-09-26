@@ -6,41 +6,45 @@ import './globals.css'
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://circularapp.in'),
+  metadataBase: new URL('https://vigneshtechnologies.vercel.app'),
 
   title: {
-    default: 'Circular – Local Social & Business',
-    template: '%s | Circular',
+    default: 'Vignesh Technologies | Software, Websites, Mobile Apps & IT Training',
+    template: '%s | Vignesh Technologies',
   },
 
   description:
-    'Circular is a hyperlocal social and business discovery platform. Discover nearby shops, events, jobs, offers, and connect with your neighborhood.',
+    'Vignesh Technologies is a technology company based in Rajapalayam, Tamil Nadu, providing software development, mobile applications, websites, AI & digital solutions, and professional IT training.',
 
   keywords: [
-    'Circular',
-    'Circular App',
-    'Local Social',
-    'Local Business',
-    'Nearby Posts',
-    'Hyperlocal App',
-    'Local Jobs',
-    'Need Board',
-    'Community Events',
-    'Business Directory',
+    'Vignesh Technologies',
     'Rajapalayam',
     'Tamil Nadu',
-    'India',
+    'Software Development',
+    'Website Development',
+    'Mobile App Development',
+    'Android App Development',
+    'IT Training',
+    'Python Course',
+    'C Programming',
+    'C++ Programming',
+    'Java Training',
+    'React JS',
+    'AI Solutions',
+    'Digital Solutions',
+    'Circular App',
   ],
 
-  applicationName: 'Circular',
+  applicationName: 'Vignesh Technologies',
 
   authors: [
     {
       name: 'Vignesh Technologies',
-      url: 'https://circularapp.in',
+      url: 'https://vigneshtechnologies.vercel.app',
     },
   ],
 
@@ -60,58 +64,60 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: 'https://circularapp.in',
+    canonical: 'https://vigneshtechnologies.vercel.app',
   },
 
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://circularapp.in',
-    siteName: 'Circular – Local Social & Business',
-    title: 'Circular – Local Social & Business',
+    url: 'https://vigneshtechnologies.vercel.app',
+    siteName: 'Vignesh Technologies',
+    title: 'Vignesh Technologies | Software, Websites, Mobile Apps & IT Training',
     description:
-      'Discover nearby shops, events, jobs, offers, and connect with your neighborhood on Circular.',
+      'Technology company providing software development, mobile applications, websites, AI/digital solutions, and professional IT training in Rajapalayam, Tamil Nadu.',
     images: [
       {
-        url: '/circular-logo.png',
+        url: '/logo.png',
         width: 1200,
         height: 1200,
-        alt: 'Circular – Local Social & Business',
+        alt: 'Vignesh Technologies',
       },
     ],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Circular – Local Social & Business',
+    title: 'Vignesh Technologies | Software, Websites, Mobile Apps & IT Training',
     description:
-      'Discover nearby shops, events, jobs, offers, and connect with your neighborhood on Circular.',
-    images: ['/circular-logo.png'],
+      'Technology company providing software development, mobile applications, websites, AI/digital solutions, and professional IT training in Rajapalayam, Tamil Nadu.',
+    images: ['/logo.png'],
   },
 
   icons: {
     icon: [
       {
-        url: '/circular-logo.png',
+        url: '/logo.png',
       },
       {
-        url: '/circular-logo.png',
-        sizes: '192x192',
+        url: '/icon-dark-32x32.png',
+        sizes: '32x32',
         type: 'image/png',
       },
       {
-        url: '/circular-logo.png',
-        sizes: '512x512',
+        url: '/icon-light-32x32.png',
+        sizes: '32x32',
         type: 'image/png',
       },
     ],
-    apple: '/circular-logo.png',
-    shortcut: '/circular-logo.png',
+    apple: '/logo.png',
+    shortcut: '/logo.png',
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0B0F17',
+  themeColor: '#0a0f1d',
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
@@ -120,8 +126,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`font-sans antialiased ${inter.variable}`}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`min-h-screen bg-background font-sans antialiased text-foreground ${inter.variable}`}>
         {children}
 
         <script
@@ -129,25 +135,21 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'SoftwareApplication',
-              name: 'Circular',
-              operatingSystem: 'Android',
-              applicationCategory: 'SocialNetworkingApplication',
-              offers: {
-                '@type': 'Offer',
-                price: '0',
-                priceCurrency: 'INR',
+              '@type': 'Organization',
+              name: 'Vignesh Technologies',
+              url: 'https://vigneshtechnologies.vercel.app',
+              logo: 'https://vigneshtechnologies.vercel.app/logo.png',
+              email: 'vigneshtechnologyservice@gmail.com',
+              telephone: '+91 8122753620',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Rajapalayam',
+                addressRegion: 'Tamil Nadu',
+                addressCountry: 'IN',
               },
-              description:
-                'Hyperlocal social and business discovery platform for discovering nearby posts, events, jobs, and local businesses.',
-              url: 'https://circularapp.in',
-              downloadUrl:
+              sameAs: [
                 'https://play.google.com/store/apps/details?id=com.vigneshtechnologies.circular',
-              author: {
-                '@type': 'Organization',
-                name: 'Vignesh Technologies',
-                url: 'https://circularapp.in',
-              },
+              ],
             }),
           }}
         />

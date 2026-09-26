@@ -4,19 +4,9 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: '*',
-      allow: [
-        '/',
-        '/post/',
-        '/business/',
-        '/user/',
-        '/job/',
-        '/need/',
-        '/event/',
-        '/terms',
-        '/competition',
-      ],
-      disallow: ['/api/', '/admin/', '/messages', '/chat/'],
+      allow: ['/', '/competition', '/terms', '/privacy'],
+      disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://circularapp.in/sitemap.xml',
+    sitemap: 'https://vigneshtechnologies.vercel.app/sitemap.xml',
   }
 }

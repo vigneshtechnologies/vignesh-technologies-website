@@ -1,18 +1,18 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowLeft, FileText, Mail, Phone, MapPin, CheckCircle2, ExternalLink } from 'lucide-react'
+import { ArrowLeft, Shield, Mail, Phone, MapPin, CheckCircle2 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Vignesh Technologies',
+  title: 'Privacy Policy | Vignesh Technologies',
   description:
-    'Terms of Service for Vignesh Technologies website, software development consulting, and professional IT training services.',
+    'Privacy Policy for Vignesh Technologies. Learn how we handle project inquiries, communication details, and website analytics.',
   alternates: {
-    canonical: 'https://vigneshtechnologies.vercel.app/terms',
+    canonical: 'https://vigneshtechnologies.vercel.app/privacy',
   },
 }
 
-export default function TermsOfServicePage() {
+export default function PrivacyPolicyPage() {
   const lastUpdated = 'September 2026'
 
   return (
@@ -50,27 +50,27 @@ export default function TermsOfServicePage() {
         {/* Title Header */}
         <div className="mb-10 border-b border-border/80 pb-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3.5 py-1 text-xs font-semibold text-primary">
-            <FileText className="size-3.5" />
-            <span>Service Agreement</span>
+            <Shield className="size-3.5" />
+            <span>Data Transparency</span>
           </div>
           <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">
-            Terms of Service
+            Privacy Policy
           </h1>
           <p className="mt-2 text-xs text-muted-foreground">
             Vignesh Technologies • Rajapalayam, Tamil Nadu • Last Updated: {lastUpdated}
           </p>
         </div>
 
-        {/* Legal Text Sections */}
+        {/* Policy Body */}
         <div className="space-y-8 text-sm leading-relaxed text-muted-foreground">
           {/* Section 1 */}
           <section className="rounded-2xl border border-border/80 bg-card p-6 shadow-2xs">
             <h2 className="text-base font-bold text-navy flex items-center gap-2">
               <CheckCircle2 className="size-4 text-primary shrink-0" />
-              1. Acceptance of Terms
+              1. Overview
             </h2>
             <p className="mt-2.5">
-              By accessing and using this website (<code>https://vigneshtechnologies.vercel.app</code>) or engaging <strong>Vignesh Technologies</strong> for software development, design, or IT training services, you agree to comply with and be bound by these Terms of Service.
+              This Privacy Policy explains how <strong>Vignesh Technologies</strong> (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), located in Rajapalayam, Tamil Nadu, handles information received through our corporate website (<code>https://vigneshtechnologies.vercel.app</code>) and communication channels.
             </p>
           </section>
 
@@ -78,21 +78,34 @@ export default function TermsOfServicePage() {
           <section className="rounded-2xl border border-border/80 bg-card p-6 shadow-2xs">
             <h2 className="text-base font-bold text-navy flex items-center gap-2">
               <CheckCircle2 className="size-4 text-primary shrink-0" />
-              2. Scope of Services
+              2. Information We Collect
             </h2>
             <p className="mt-2.5">
-              Vignesh Technologies provides professional technology services, including custom software development, website and mobile application engineering, AI and digital solutions, and practical IT training programs. Specific deliverables, development milestones, and project pricing are established in individual service agreements or quotation orders.
+              We collect information that you voluntarily provide when you submit an inquiry, request technical services, or ask about our IT training courses:
             </p>
+            <ul className="mt-3 list-disc list-inside space-y-1.5 pl-2">
+              <li><strong>Contact Information:</strong> Full name, phone/WhatsApp number, and email address.</li>
+              <li><strong>Inquiry Details:</strong> Project descriptions, service category selections, and message notes.</li>
+              <li><strong>Communication Records:</strong> Correspondence sent to our official email address or telephone lines.</li>
+            </ul>
           </section>
 
           {/* Section 3 */}
           <section className="rounded-2xl border border-border/80 bg-card p-6 shadow-2xs">
             <h2 className="text-base font-bold text-navy flex items-center gap-2">
               <CheckCircle2 className="size-4 text-primary shrink-0" />
-              3. Intellectual Property Rights
+              3. How We Use Information
             </h2>
             <p className="mt-2.5">
-              All branding, text, code structures, graphics, and materials displayed on this corporate website are the property of Vignesh Technologies. For custom client development projects, intellectual property ownership and licensing terms are governed by the specific contractual agreement executed between Vignesh Technologies and the client upon project completion and full settlement of dues.
+              Submitted information is used strictly for legitimate business purposes:
+            </p>
+            <ul className="mt-3 list-disc list-inside space-y-1.5 pl-2">
+              <li>Responding directly to your software project inquiries and quotation requests.</li>
+              <li>Providing course details, batch schedules, and admission guidance for IT training.</li>
+              <li>Administrative communication regarding ongoing client projects.</li>
+            </ul>
+            <p className="mt-3 font-medium text-navy">
+              We do not sell, rent, or trade your contact information to any third parties for advertising or marketing campaigns.
             </p>
           </section>
 
@@ -100,10 +113,10 @@ export default function TermsOfServicePage() {
           <section className="rounded-2xl border border-border/80 bg-card p-6 shadow-2xs">
             <h2 className="text-base font-bold text-navy flex items-center gap-2">
               <CheckCircle2 className="size-4 text-primary shrink-0" />
-              4. IT Academy &amp; Training Terms
+              4. Website Analytics &amp; Cookies
             </h2>
             <p className="mt-2.5">
-              Course admissions, schedules, curriculum modules, and fees for our computer education and IT training programs in Rajapalayam are subject to confirmation at the time of enrollment. Training materials are provided for personal educational use only.
+              Our website uses privacy-friendly web analytics provided by Vercel Analytics to monitor aggregate traffic patterns, visitor counts, and page load performance. These metrics are processed without user profiling or advertising tracking cookies.
             </p>
           </section>
 
@@ -111,19 +124,10 @@ export default function TermsOfServicePage() {
           <section className="rounded-2xl border border-border/80 bg-card p-6 shadow-2xs">
             <h2 className="text-base font-bold text-navy flex items-center gap-2">
               <CheckCircle2 className="size-4 text-primary shrink-0" />
-              5. Circular Product Terms Reference
+              5. Circular Product Privacy Reference
             </h2>
             <p className="mt-2.5">
-              <strong>Circular</strong> is an independent software product developed by Vignesh Technologies. End-user usage of the Circular mobile application and community web platform is governed by Circular&apos;s dedicated terms accessible directly on{' '}
-              <a
-                href="https://circularapp.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary font-medium hover:underline inline-flex items-center gap-1"
-              >
-                circularapp.in
-                <ExternalLink className="size-3" />
-              </a>.
+              <strong>Circular</strong> is a separate software product developed by Vignesh Technologies. User data, profiles, and interactions within the Circular mobile application or web platform (<code>https://circularapp.in</code>) are governed by Circular&apos;s dedicated Privacy Policy and Community Guidelines.
             </p>
           </section>
 
@@ -131,21 +135,10 @@ export default function TermsOfServicePage() {
           <section className="rounded-2xl border border-border/80 bg-card p-6 shadow-2xs">
             <h2 className="text-base font-bold text-navy flex items-center gap-2">
               <CheckCircle2 className="size-4 text-primary shrink-0" />
-              6. Limitation of Liability
+              6. Contact Information for Privacy Matters
             </h2>
             <p className="mt-2.5">
-              This website and general technical information are provided on an &quot;as is&quot; basis. Vignesh Technologies makes reasonable efforts to keep information accurate and up to date, but does not warrant that website access will be uninterrupted or error-free.
-            </p>
-          </section>
-
-          {/* Section 7 */}
-          <section className="rounded-2xl border border-border/80 bg-card p-6 shadow-2xs">
-            <h2 className="text-base font-bold text-navy flex items-center gap-2">
-              <CheckCircle2 className="size-4 text-primary shrink-0" />
-              7. Contact Information
-            </h2>
-            <p className="mt-2.5">
-              For any legal notices, service questions, or inquiries regarding these Terms, please contact us:
+              For any questions regarding this Privacy Policy or your contact information, please reach out to us:
             </p>
             <div className="mt-4 flex flex-col gap-2 rounded-xl bg-secondary/50 p-4 text-xs">
               <div className="font-bold text-navy text-sm">Vignesh Technologies</div>
@@ -176,8 +169,8 @@ export default function TermsOfServicePage() {
           <p>&copy; {new Date().getFullYear()} Vignesh Technologies. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <Link href="/" className="hover:text-navy transition-colors">Home</Link>
-            <Link href="/terms" className="text-primary font-semibold">Terms of Service</Link>
-            <Link href="/privacy" className="hover:text-navy transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-navy transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="text-primary font-semibold">Privacy Policy</Link>
           </div>
         </div>
       </footer>
