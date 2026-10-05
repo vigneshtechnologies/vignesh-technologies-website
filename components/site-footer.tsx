@@ -137,7 +137,7 @@ export function SiteFooter() {
                 href="/competition"
                 className="inline-flex items-center gap-1.5 text-xs text-primary-foreground hover:underline"
               >
-                <span>School Innovation Challenge</span>
+                <span>Student Innovation Challenge 2026</span>
                 <ExternalLink className="size-3" />
               </Link>
             </div>
